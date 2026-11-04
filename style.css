@@ -56,4 +56,4 @@
     }
 }
 
-@media(max-width:800px){.profile-photo{width:min(100%,280px)}}
+@media(max-width:800px){.profile-photo{width:min(100%,180px)}}
