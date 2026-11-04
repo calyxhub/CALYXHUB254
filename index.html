@@ -3,139 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050914">
-  <meta name="description" content="Daniel Wachira — Computer Science student, web developer and creative technology enthusiast. Learn, Build, Grow.">
-  <title>Daniel Wachira | CalyxHub Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Daniel Wachira — Computer Science student, web developer and creative technology enthusiast. Explore projects, skills and contact CalyxHub.">
+  <title>Daniel Wachira | CalyxHub</title>
+  <style>
+    :root{--bg:#080d18;--panel:#101a2c;--panel2:#13213a;--text:#eef4ff;--muted:#9aabc4;--cyan:#55e6e0;--blue:#6d8cff;--line:rgba(180,205,255,.14);--max:1120px}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 15% 0%,rgba(57,103,190,.22),transparent 36%),radial-gradient(ellipse at 90% 25%,rgba(26,183,184,.10),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,13,24,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.2px}
+    .brand-mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06101b;font-weight:900;box-shadow:0 8px 28px #55e6e033}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;font-weight:700}
+    nav{display:flex;align-items:center;gap:25px;color:#c5d2e7;font-size:13px;font-weight:650}
+    nav a:hover,nav a.active{color:var(--cyan)}
+    .nav-contact,.btn{border:1px solid rgba(85,230,224,.5);border-radius:999px;padding:10px 17px;color:var(--cyan);font-weight:750;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+    .nav-contact:hover,.btn:hover{background:var(--cyan);color:#06101b;transform:translateY(-2px)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px;font-size:20px}
+    .hero{padding:105px 0 86px;display:grid;grid-template-columns:1.35fr .65fr;gap:45px;align-items:center}
+    .eyebrow{color:var(--cyan);font-size:11px;letter-spacing:3px;font-weight:850;text-transform:uppercase}
+    h1{font-size:clamp(42px,6.3vw,76px);line-height:1.06;letter-spacing:-3px;margin:18px 0 22px}
+    h1 span{background:linear-gradient(90deg,var(--cyan),#9eb5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:660px;color:var(--muted);font-size:17px;margin:0 0 30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn.primary{background:linear-gradient(110deg,var(--cyan),#8ba7ff);color:#06101b;border:0}
+    .btn.secondary{border-color:var(--line);color:var(--text)}
+    .hero-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(24,42,70,.92),rgba(13,23,40,.88));border-radius:24px;padding:27px;box-shadow:0 25px 80px #0005}
+    .hero-card .mini{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:2px}
+    .hero-card h2{font-size:24px;margin:8px 0}
+    .hero-card p{font-size:14px;margin:0;color:var(--muted)}
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .stat{padding:14px;border-radius:14px;background:#ffffff08;border:1px solid var(--line)}
+    .stat strong{display:block;color:var(--cyan);font-size:20px}
+    .stat span{font-size:11px;color:var(--muted)}
+    section{padding:76px 0;scroll-margin-top:85px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+    .section-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.3px;margin:5px 0 0}
+    .section-head p{color:var(--muted);max-width:440px;margin:0;font-size:14px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .panel{background:linear-gradient(145deg,rgba(19,33,58,.92),rgba(13,22,39,.92));border:1px solid var(--line);border-radius:20px;padding:26px}
+    .panel h3{margin:0 0 10px;font-size:19px}
+    .panel p{color:var(--muted);margin:0 0 12px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .fact{padding:13px;background:#ffffff07;border-radius:12px;color:var(--muted);font-size:12px}
+    .fact strong{display:block;color:var(--text);font-size:13px;margin-bottom:3px}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skill{padding:19px;border:1px solid var(--line);border-radius:16px;background:#ffffff06}
+    .skill h3{margin:0 0 8px;font-size:15px}
+    .skill p{margin:0;color:var(--muted);font-size:13px}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{position:relative;overflow:hidden;min-height:275px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#172b4b,#101a2c);padding:25px;display:flex;flex-direction:column;transition:.25s}
+    .project:hover{transform:translateY(-5px);border-color:#55e6e077;box-shadow:0 20px 50px #0004}
+    .project:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-85px;top:-100px;background:radial-gradient(circle,#55e6e033,transparent 70%);pointer-events:none}
+    .project-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .project-icon{width:45px;height:45px;border-radius:14px;background:#55e6e018;border:1px solid #55e6e044;display:grid;place-items:center;font-size:21px}
+    .status{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);font-weight:800}
+    .project h3{font-size:24px;margin:19px 0 7px}
+    .project p{color:var(--muted);font-size:14px;margin:0 0 20px;max-width:520px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;margin-bottom:18px}
+    .tag{font-size:10px;color:#c8d7ee;border:1px solid var(--line);padding:5px 9px;border-radius:99px}
+    .project-link{color:var(--cyan);font-size:13px;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+    .timeline{display:grid;gap:14px}
+    .timeline-item{border-left:2px solid #55e6e066;padding:2px 0 3px 20px}
+    .timeline-item strong{display:block}
+    .timeline-item span{font-size:12px;color:var(--cyan)}
+    .timeline-item p{margin:5px 0 0;color:var(--muted);font-size:13px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .contact-link{display:flex;align-items:center;gap:13px;padding:15px;border:1px solid var(--line);border-radius:14px;margin-top:12px;background:#ffffff05}
+    .contact-link b{display:block;font-size:13px}
+    .contact-link span{color:var(--muted);font-size:12px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .modal{position:fixed;inset:0;background:#020610d9;z-index:50;display:none;place-items:center;padding:20px}
+    .modal.open{display:grid}
+    .modal-box{width:min(560px,100%);background:#111e33;border:1px solid #55e6e055;border-radius:22px;padding:28px;box-shadow:0 25px 100px #0009;position:relative}
+    .modal-box h3{font-size:27px;margin:8px 0}
+    .modal-box p{color:var(--muted)}
+    .modal-close{position:absolute;right:16px;top:14px;background:#ffffff12;border:0;color:white;border-radius:9px;padding:7px 11px;cursor:pointer}
+    .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:75px 0 55px}.hero-card{max-width:520px}.skills{grid-template-columns:repeat(2,1fr)}nav{gap:14px}}
+    @media(max-width:620px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:66px}.menu{display:block}nav{display:none;position:absolute;top:66px;left:0;right:0;padding:18px 22px 22px;background:#0b1322;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{padding:7px}.nav-contact{display:none}.hero{padding-top:62px}h1{letter-spacing:-1.8px}.section-head{display:block}.section-head p{margin-top:10px}.about-grid,.projects,.contact-grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.facts{grid-template-columns:1fr 1fr}section{padding:58px 0}}
+    @media(max-width:390px){.skills{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <div class="site-glow"></div>
-  <header class="topbar">
-   <a class="brand" href="#home" aria-label="CalyxHub home">
-
-  <img
-    src="./assets/calyxhub-logo.jpg"
-    alt="CalyxHub Logo"
-    class="brand-logo"
-    onerror="this.onerror=null; this.src='https://calyxhub.github.io/calyxhub/assets/calyxhub-logo.jpg';"
-  >
-
-</a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav id="navMenu">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="CalyxHub home"><span class="brand-mark">C</span><span>CALYXHUB<small>TECH • BUILD • CREATE</small></span></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
     </nav>
-  </header>
+    <a class="nav-contact" href="#contact">Let's connect ↗</a>
+  </div>
+</header>
 
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="pulse"></span> COMPUTER SCIENCE • CREATIVE TECHNOLOGY</p>
-        <h1>Turning ideas into <span>useful technology.</span></h1>
-        <p class="lead">I'm <strong>Daniel Wachira</strong> — a Computer Science student building practical digital solutions through web development, networking, databases and design.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="btn secondary" href="#contact">Let's connect</a>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Computer Science • Web Development • Technology</div>
+      <h1>Curious mind.<br><span>Builder's mindset.</span></h1>
+      <p>I'm Daniel Wachira, a Computer Science student who enjoys understanding how technology works and turning ideas into useful digital experiences. Welcome to my corner of the web.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my projects ↗</a><a class="btn secondary" href="#contact">Get in touch</a></div>
+    </div>
+    <aside class="hero-card">
+      <div class="mini">Welcome to my portfolio</div>
+      <h2>Ideas into useful technology.</h2>
+      <p>I learn by building — from websites and databases to networking, computer systems and digital tools.</p>
+      <div class="stat-grid">
+        <div class="stat"><strong>4+</strong><span>Featured projects</span></div>
+        <div class="stat"><strong>CS</strong><span>Field of study</span></div>
+        <div class="stat"><strong>Web</strong><span>Building for the web</span></div>
+        <div class="stat"><strong>Always</strong><span>Learning and improving</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">01 / About me</div><h2>A little about Daniel</h2></div><p>Technology is more than a subject to study — it's a practical way to solve problems and make everyday work easier.</p></div>
+      <div class="about-grid">
+        <div class="panel"><h3>Curiosity drives my work.</h3><p>I enjoy exploring how software, hardware and networks fit together. I am growing my skills through coursework, hands-on practice and personal projects.</p><p>My current interests include web development, databases, networking, operating systems and creative digital solutions.</p></div>
+        <div class="panel"><h3>Quick facts</h3><div class="facts"><div class="fact"><strong>Based in</strong>Nairobi, Kenya</div><div class="fact"><strong>Study area</strong>Computer Science</div><div class="fact"><strong>Approach</strong>Learn by building</div><div class="fact"><strong>Portfolio</strong>CalyxHub</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">02 / Skills</div><h2>Tools I work with</h2></div><p>A growing toolkit built through college practicals, self-learning and project work.</p></div>
+      <div class="skills">
+        <div class="skill"><h3>Web development</h3><p>HTML, CSS, JavaScript and responsive page layouts.</p></div>
+        <div class="skill"><h3>Programming</h3><p>Python, Visual Basic fundamentals and problem solving.</p></div>
+        <div class="skill"><h3>Databases</h3><p>SQL, database design, queries, tables and relationships.</p></div>
+        <div class="skill"><h3>Networking</h3><p>Networking fundamentals, IP addressing and Cisco Packet Tracer.</p></div>
+        <div class="skill"><h3>Computer systems</h3><p>Computer organization, hardware and operating systems.</p></div>
+        <div class="skill"><h3>Productivity & design</h3><p>Microsoft Office, graphic design and digital content.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Projects with a purpose</h2></div><p>Choose a project to explore its purpose, current status and available destination.</p></div>
+      <div class="projects">
+        <a class="project" href="https://wachirad341.github.io/calyxhub2/" target="_blank" rel="noopener">
+          <div class="project-top"><span class="project-icon">✦</span><span class="status">Web platform</span></div>
+          <h3>CalyxHub</h3><p>A resource hub concept for technology tips, tutorials, notes, software guidance and useful digital resources.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <div class="project-link"><span>Visit live project</span><span>↗</span></div>
+        </a>
+        <button class="project project-button" type="button" data-project="track" style="text-align:left;color:inherit;font:inherit;cursor:pointer">
+          <div class="project-top"><span class="project-icon">⌖</span><span class="status">In development</span></div>
+          <h3>CalyxTrack</h3><p>A consent-first location-sharing concept focused on users choosing when and with whom to share their device location.</p>
+          <div class="tags"><span class="tag">Web</span><span class="tag">Geolocation</span><span class="tag">Privacy-first</span></div>
+          <div class="project-link"><span>View project details</span><span>↗</span></div>
+        </button>
+        <a class="project" href="https://fgck-mihango.vercel.app/" target="_blank" rel="noopener">
+          <div class="project-top"><span class="project-icon">✧</span><span class="status">Community project</span></div>
+          <h3>FGCK Mihango</h3><p>A church website concept bringing service information, announcements, contact details and community updates together.</p>
+          <div class="tags"><span class="tag">Website</span><span class="tag">Community</span><span class="tag">Design</span></div>
+          <div class="project-link"><span>Visit website</span><span>↗</span></div>
+        </a>
+        <button class="project project-button" type="button" data-project="student" style="text-align:left;color:inherit;font:inherit;cursor:pointer">
+          <div class="project-top"><span class="project-icon">▤</span><span class="status">Academic practice</span></div>
+          <h3>Student Management</h3><p>An academic database application concept for organizing student admission numbers, names and course information.</p>
+          <div class="tags"><span class="tag">Visual Basic</span><span class="tag">SQL Server</span><span class="tag">Database</span></div>
+          <div class="project-link"><span>View project details</span><span>↗</span></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">04 / Experience</div><h2>Learning through practice</h2></div><p>My focus is building practical confidence alongside my formal studies.</p></div>
+      <div class="panel timeline">
+        <div class="timeline-item"><strong>Personal technology projects</strong><span>Ongoing</span><p>Designing and improving websites, exploring databases and practising practical IT skills.</p></div>
+        <div class="timeline-item"><strong>ICT learning and hands-on practice</strong><span>Coursework & practical learning</span><p>Working through computer systems, operating systems, networking, programming and database exercises.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">05 / Education</div><h2>My learning journey</h2></div></div>
+      <div class="panel timeline">
+        <div class="timeline-item"><strong>Kiambu National Polytechnic</strong><span>2024 – 2027</span><p>Computer Science — TVET / CDACC Level 6.</p></div>
+        <div class="timeline-item"><strong>GG Rumuruti Boys High School</strong><span>2020 – 2023</span><p>Secondary education.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">06 / Contact</div><h2>Have an idea? Let's talk.</h2></div><p>For collaborations, project enquiries, opportunities or a friendly technology conversation, reach out.</p></div>
+      <div class="contact-grid">
+        <div class="panel"><h3>Get in touch</h3><p>I'm happy to connect about technology, websites, learning and project ideas.</p>
+          <a class="contact-link" href="mailto:calyxhub304@gmail.com"><span>✉️</span><div><b>Email</b><span>calyxhub304@gmail.com</span></div></a>
+          <a class="contact-link" href="https://wa.me/254792717626" target="_blank" rel="noopener"><span>💬</span><div><b>WhatsApp</b><span>+254 792 717 626</span></div></a>
         </div>
-        <div class="mini-proof"><span>01</span> Learn <i>•</i> <span>02</span> Build <i>•</i> <span>03</span> Grow</div>
+        <div class="panel"><h3>Connect with CalyxHub</h3><p>Based in Nairobi, Kenya. Let's turn a good idea into something useful.</p><a class="btn primary" href="https://wa.me/254792717626?text=Hello%20Daniel%2C%20I%20found%20your%20CalyxHub%20portfolio." target="_blank" rel="noopener">Message on WhatsApp ↗</a></div>
       </div>
-      <div class="hero-art">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="logo-card"><img src="assets/calyxhub-logo.jpg" alt="CalyxHub — Learn, Build, Grow"></div>
-        <div class="float-tag tag-top">⌘ Problem solving</div>
-        <div class="float-tag tag-bottom">✦ Always learning</div>
-      </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section class="section intro-grid" id="about">
-      <div class="about-heading">
-        <p class="eyebrow">01 / ABOUT ME</p>
-        <h2>Curious mind.<br><span>Builder's mindset.</span></h2>
-      </div>
-      <div class="about-text">
-        <p>I enjoy understanding how technology works and using that knowledge to create things people can actually use. My interests range from writing code and building websites to computer systems, networking and visual design.</p>
-        <p>I'm growing my skills through coursework, hands-on practice and personal projects. I value clean design, simple user experiences and learning by building.</p>
-        <div class="about-facts">
-          <div><b>Computer Science</b><small>TVET / CDACC Level 6</small></div>
-          <div><b>Kiambu National Polytechnic</b><small>2024 – 2027</small></div>
-        </div>
-      </div>
-    </section>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> CalyxHub · Daniel Wachira</span><span>Built with curiosity in Nairobi, Kenya.</span><a href="#home">Back to top ↑</a></div></footer>
 
-    <section class="section" id="skills">
-      <div class="section-heading"><div><p class="eyebrow">02 / WHAT I DO</p><h2>Skills & <span>toolkit</span></h2></div><p>Practical skills I'm developing and applying across classwork and personal projects.</p></div>
-      <div class="skill-grid">
-        <article class="skill-card"><div class="skill-icon">⌨</div><h3>Programming</h3><p>Python fundamentals, Visual Basic and logical problem solving.</p><div class="tags"><span>Python</span><span>VB.NET</span><span>Logic</span></div></article>
-        <article class="skill-card"><div class="skill-icon">⌘</div><h3>Web Development</h3><p>Building responsive websites and working with front-end technologies.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
-        <article class="skill-card"><div class="skill-icon">▤</div><h3>Databases</h3><p>Creating tables, writing SQL queries and learning application connectivity.</p><div class="tags"><span>SQL</span><span>SQL Server</span><span>Database design</span></div></article>
-        <article class="skill-card"><div class="skill-icon">⌁</div><h3>Networking</h3><p>Network fundamentals, configuration practice and troubleshooting.</p><div class="tags"><span>TCP/IP</span><span>Packet Tracer</span><span>Troubleshooting</span></div></article>
-        <article class="skill-card"><div class="skill-icon">▣</div><h3>Computer Systems</h3><p>Computer organization, operating systems and basic hardware support.</p><div class="tags"><span>Windows</span><span>Hardware</span><span>OS</span></div></article>
-        <article class="skill-card"><div class="skill-icon">✳</div><h3>Design & Productivity</h3><p>Visual communication, graphics and everyday office productivity tools.</p><div class="tags"><span>Graphic design</span><span>Word</span><span>Excel</span><span>PowerPoint</span></div></article>
-      </div>
-    </section>
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close details">✕</button>
+    <div class="eyebrow" id="modalEyebrow">Project details</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <div class="tags" id="modalTags"></div>
+    <div class="modal-actions"><a class="btn primary" id="modalAction" href="#contact">Discuss this project ↗</a><button class="btn secondary" id="modalDone" type="button">Close</button></div>
+  </div>
+</div>
 
-    <section class="section projects-section" id="projects">
-      <div class="section-heading"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>Things I'm <span>building</span></h2></div><p>A selection of personal and learning projects. Some are works in progress.</p></div>
-      <div class="filter-row" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="learning">Learning</button><button class="filter" data-filter="community">Community</button>
-      </div>
-      <div class="project-grid" id="projectGrid">
-        <article class="project-card" data-category="web"><div class="project-visual visual-blue"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=85" alt="A team working with laptops and digital technology" loading="lazy"></div><div class="project-body"><p class="project-type">WEB PLATFORM</p><h3>CalyxHub</h3><p>A resource hub concept for technology tips, tutorials, notes and useful digital resources.</p><div class="project-foot"><span>HTML • CSS • JavaScript</span><a href="https://wachirad341.github.io/danieltech/" target="_blank" rel="noopener">Visit project ↗</a></div></div></article>
-        <article class="project-card" data-category="web"><div class="project-visual visual-dark"><img src="https://images.unsplash.com/photo-1524666041070-4a5e7c7e7e2a?auto=format&fit=crop&w=1000&q=85" alt="Map view representing consent-based GPS location sharing" loading="lazy"></div><div class="project-body"><p class="project-type">WEB APPLICATION • IN PROGRESS</p><h3>CalyxTrack</h3><p>A location-sharing concept focused on clear user consent and sharing a device's own GPS location.</p><div class="project-foot"><span>Web • Geolocation</span><span class="status">In progress</span></div></div></article>
-        <article class="project-card" data-category="community"><div class="project-visual visual-purple"><img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1000&q=85" alt="Church interior representing the FGCK Mihango website concept" loading="lazy"></div><div class="project-body"><p class="project-type">COMMUNITY PROJECT</p><h3>FGCK Mihango</h3><p>A church website concept for service information, announcements, media and online giving details.</p><div class="project-foot"><span>Web design</span><span class="status">Concept</span></div></div></article>
-        <article class="project-card" data-category="learning"><div class="project-visual visual-green"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1000&q=85" alt="Computer screen showing programming code for a student database project" loading="lazy"></div><div class="project-body"><p class="project-type">ACADEMIC PRACTICE</p><h3>Student Management</h3><p>Practising student records, SQL queries and connecting a Visual Basic application to SQL Server.</p><div class="project-foot"><span>Visual Basic • SQL</span><span class="status">Learning</span></div></div></article>
-      </div>
-    </section>
-
-
-    <section class="section experience-section" id="experience">
-      <div class="section-heading"><div><p class="eyebrow">04 / PRACTICAL EXPOSURE</p><h2>Experience & <span>practice</span></h2></div><p>Hands-on exposure to technology environments, support work and real-world systems.</p></div>
-      <div class="experience-grid">
-        <article class="experience-card">
-          <span class="experience-mark">01</span>
-          <div><p class="project-type">TECHNICAL ENVIRONMENT</p><h3>TV & Radio Station</h3><p>Exposure to broadcast technology environments, including server-room systems and the technical infrastructure that supports station operations.</p><div class="tags"><span>Server-room systems</span><span>Technical support</span><span>Broadcast technology</span></div></div>
-        </article>
-        <article class="experience-card">
-          <span class="experience-mark">02</span>
-          <div><p class="project-type">ICT DEPARTMENT</p><h3>Laikipia County Government</h3><p>ICT department exposure, building familiarity with information technology support and organizational ICT operations.</p><div class="tags"><span>ICT support</span><span>Computer systems</span></div></div>
-        </article>
-        <article class="experience-card">
-          <span class="experience-mark">03</span>
-          <div><p class="project-type">IT SUPPORT & MEDIA</p><h3>Obex Limited</h3><p>Practical exposure connected to IT support and media-related work.</p><div class="tags"><span>IT support</span><span>Media</span></div></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section education" id="education">
-      <div><p class="eyebrow">05 / LEARNING JOURNEY</p><h2>Education & <span>growth</span></h2></div>
-      <div class="timeline"><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-date">2024 — 2027</p><h3>Computer Science · TVET / CDACC Level 6</h3><p>Kiambu National Polytechnic</p><small>Building foundations in programming, databases, networking, computer systems and mathematics.</small></div><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-date">ONGOING</p><h3>Learning by building</h3><p>Personal projects & practical exercises</p><small>Applying classroom knowledge to websites, database applications and real-world technology challenges.</small></div></div>
-    </section>
-
-    <section class="contact-section section" id="contact">
-      <div class="contact-panel"><div><p class="eyebrow">05 / GET IN TOUCH</p><h2>Have an idea?<br><span>Let's build something.</span></h2><p class="contact-copy">I'm open to learning opportunities, collaborations, projects and conversations about technology.</p>
-          <div class="direct-contact">
-            <a href="https://wa.me/254792717626" target="_blank" rel="noopener">WhatsApp · 0792717626 ↗</a>
-            <a href="mailto:calyxhub304@gmail.com">calyxhub304@gmail.com ↗</a>
-          </div>
-        </div>
-        <form id="contactForm">
-          <label for="senderName">Your name</label><input id="senderName" name="name" required placeholder="Enter your name">
-          <label for="senderEmail">Your email</label><input id="senderEmail" name="email" type="email" required placeholder="you@example.com">
-          <label for="message">Message</label><textarea id="message" name="message" rows="4" required placeholder="Tell me what you have in mind..."></textarea>
-          <button class="btn primary submit-btn" type="submit">Prepare message <span>↗</span></button>
-          <p class="form-note" id="formNote">This opens your email app with your message ready to send.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer><a class="footer-brand" href="#home">Calyx<span>Hub</span></a><p>Learn. Build. Grow.</p><small>© <span id="year"></span> Daniel Wachira. Built with curiosity.</small><a class="back-top" href="#home">Back to top ↑</a></footer>
-  <script src="script.js"></script>
- 
-  
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const details={
+    track:{eyebrow:'Web application · In progress',title:'CalyxTrack',text:'CalyxTrack is a location-sharing concept being planned around clear consent. A person should deliberately start sharing, understand who can see their location, and be able to stop sharing. The project is still in development; no live tracking service is being offered yet.',tags:['Consent-first','Geolocation','Privacy controls'],action:'mailto:calyxhub304@gmail.com?subject=CalyxTrack%20project%20enquiry'},
+    student:{eyebrow:'Academic practice',title:'Student Management',text:'A student-records application concept for practising database design and application development. The planned foundation includes student admission number, full name and course, with a Visual Basic interface connected to SQL Server.',tags:['Visual Basic 2010','SQL Server','Student records'],action:'mailto:calyxhub304@gmail.com?subject=Student%20Management%20project%20enquiry'}
+  };
+  const modal=document.getElementById('projectModal');
+  function closeModal(){modal.classList.remove('open');}
+  document.querySelectorAll('[data-project]').forEach(button=>button.addEventListener('click',()=>{
+    const d=details[button.dataset.project];
+    document.getElementById('modalEyebrow').textContent=d.eyebrow;
+    document.getElementById('modalTitle').textContent=d.title;
+    document.getElementById('modalText').textContent=d.text;
+    document.getElementById('modalTags').innerHTML=d.tags.map(t=>'<span class="tag"></span>').join('');
+    [...document.getElementById('modalTags').children].forEach((el,i)=>el.textContent=d.tags[i]);
+    document.getElementById('modalAction').href=d.action;
+    modal.classList.add('open');
+  }));
+  document.getElementById('modalClose').addEventListener('click',closeModal);
+  document.getElementById('modalDone').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
 </body>
 </html>
