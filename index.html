@@ -1,175 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
- <meta name="google-site-verification" content="5NODLfdmatWcrs8OOt4B9csvA7CSBMgdEWxoKgKj-Lk" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07111f">
-<meta name="description" content="Daniel Wachira — Computer Science student, web developer and founder of CalyxHub. Explore projects, skills and experience.">
-<title>Daniel Wachira | CalyxHub Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--cyan:#59e6e0;--blue:#7ca2ff;--ink:#07111f;--panel:#101e30;--muted:#bdc9d8;--line:#ffffff24;--max:1160px}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:#07111f;color:#f4f8ff;font-family:"DM Sans",sans-serif;line-height:1.65}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
-header{position:sticky;top:0;z-index:30;background:#07111feF;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:800;letter-spacing:.5px}
-.brand img{width:54px;height:48px;object-fit:contain;background:#fff;border-radius:9px;padding:3px}
-.brand span span{color:var(--cyan)}
-.brand small{display:block;color:#9eafc4;font-size:9px;letter-spacing:2px}
-nav{display:flex;align-items:center;gap:24px;font-size:13px;color:#d2dceb}
-nav a:hover{color:var(--cyan)}
-.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:30px;border:1px solid #59e6e088;color:var(--cyan);font-weight:700;font-size:13px;transition:.2s}
-.nav-cta:hover,.btn:hover{background:var(--cyan);color:#06101a;transform:translateY(-2px)}
-.menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:9px;padding:7px 11px;font-size:20px}
-.hero{min-height:650px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px;padding:90px 0;position:relative;isolation:isolate}
-.hero:before{content:"";position:absolute;z-index:-2;inset:0 -100vw;background:linear-gradient(90deg,rgba(4,12,23,.96) 0%,rgba(4,12,23,.83) 47%,rgba(4,12,23,.35) 100%),url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat}
-.hero:after{content:"";position:absolute;z-index:-1;inset:0 -100vw;background:radial-gradient(circle at 75% 45%,#2b8da533,transparent 38%)}
-.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif}
-h1{font-size:clamp(43px,6vw,76px);line-height:1.06;letter-spacing:-2.8px;margin:18px 0}
-h1 span,.section-head h2 span{background:linear-gradient(90deg,var(--cyan),#9cb5ff);background-clip:text;color:transparent}
-.hero-copy>p:not(.eyebrow){max-width:650px;color:#d0dbea;font-size:17px;margin-bottom:28px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn.primary{background:linear-gradient(110deg,var(--cyan),#9ab0ff);color:#07111f;border:0}
-.btn.secondary{border-color:#ffffff55;color:#fff}
-.hero-note{margin-top:28px;color:#d5e2f0;font-size:12px;letter-spacing:1px}
-.hero-note b{color:var(--cyan);margin:0 7px}
-.hero-panel{padding:28px;border:1px solid #ffffff35;border-radius:22px;background:#07111fbd;backdrop-filter:blur(12px);box-shadow:0 25px 75px #0008}
-.hero-panel img{width:100%;height:155px;object-fit:contain;background:#fff;border-radius:13px;padding:12px}
-.hero-panel h2{font-size:25px;margin:20px 0 8px}
-.hero-panel p{color:#c0ccdc;font-size:14px;margin:0}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.stat{padding:12px;border-radius:12px;background:#ffffff10;border:1px solid #ffffff17}
-.stat strong{display:block;color:var(--cyan);font-size:20px}
-.stat span{font-size:11px;color:#c3d0df}
-section{padding:78px 0;scroll-margin-top:85px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
-.section-head h2{font-size:clamp(29px,4vw,43px);margin:5px 0 0;line-height:1.15}
-.section-head>p{max-width:460px;color:var(--muted);font-size:14px;margin:0}
-.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-.panel{padding:27px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(145deg,#14243a,#0d1929)}
-.panel h3{margin:0 0 10px;font-size:20px}
-.panel p{color:var(--muted);margin:0 0 12px}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.fact{padding:13px;background:#ffffff09;border-radius:12px;color:var(--muted);font-size:12px}
-.fact strong{display:block;color:white;font-size:13px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.skill{padding:20px;border:1px solid var(--line);border-radius:16px;background:#ffffff08}
-.skill .symbol{font-size:23px;color:var(--cyan)}
-.skill h3{font-size:16px;margin:7px 0}
-.skill p{font-size:13px;color:var(--muted);margin:0}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.project{overflow:hidden;border:1px solid var(--line);border-radius:19px;background:#101e30;transition:.25s}
-.project:hover{transform:translateY(-5px);border-color:#59e6e088;box-shadow:0 20px 45px #0005}
-.project img{width:100%;height:220px;display:block;object-fit:cover}
-.project-body{padding:22px}
-.project-type{font-size:10px;letter-spacing:2px;color:var(--cyan);font-weight:800;text-transform:uppercase}
-.project h3{font-size:24px;margin:5px 0}
-.project p{font-size:14px;color:var(--muted);margin:0 0 17px}
-.tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}
-.tag{font-size:10px;padding:5px 9px;border:1px solid var(--line);border-radius:30px;color:#d4e0ef}
-.project-link{display:inline-flex;color:var(--cyan);font-size:13px;font-weight:800;margin-top:4px}
-.timeline{display:grid;gap:18px}
-.timeline-item{border-left:2px solid #59e6e077;padding:0 0 5px 20px}
-.timeline-item strong{display:block;font-size:16px}
-.timeline-item span{font-size:12px;color:var(--cyan)}
-.timeline-item p{color:var(--muted);font-size:13px;margin:5px 0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.contact-link{display:flex;gap:13px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:13px;margin-top:12px;background:#ffffff08}
-.contact-link b{display:block;font-size:13px}
-.contact-link span{font-size:12px;color:var(--muted)}
-footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:850px){.hero{grid-template-columns:1fr;gap:25px;padding:75px 0}.hero-panel{max-width:540px}.skills{grid-template-columns:repeat(2,1fr)}nav{gap:13px}}
-@media(max-width:650px){.wrap{width:calc(100% - 30px)}.nav{height:68px}.brand img{width:44px;height:42px}.menu{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px;background:#07111f;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}nav.open{display:flex}nav a{padding:7px}.nav-cta{display:none}.hero{padding:60px 0}.hero:before{background:linear-gradient(90deg,#040c17ed,#040c17b8),url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80") center/cover}h1{letter-spacing:-1.6px}.section-head{display:block}.section-head>p{margin-top:10px}.about-grid,.projects,.contact-grid{grid-template-columns:1fr}section{padding:58px 0}.project img{height:190px}}
-@media(max-width:390px){.skills,.facts{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>CalyxHub | Web Development, Tech Tutorials & Digital Solutions in Kenya</title>
+  <meta name="description" content="CalyxHub is a Kenyan technology hub offering web development, computer tutorials, software guides, IT resources and practical digital solutions.">
+  <link rel="canonical" href="https://calyxhub.github.io/CALYXHUB254/">
+  <link rel="icon" href="assets/calyxhub-logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/calyxhub-logo.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalyxHub">
+  <meta property="og:title" content="CalyxHub | Technology & Digital Solutions">
+  <meta property="og:description" content="Explore web development, computer tutorials, software guides and practical digital solutions from CalyxHub Kenya.">
+  <meta property="og:url" content="https://calyxhub.github.io/CALYXHUB254/">
+  <meta property="og:image" content="https://calyxhub.github.io/CALYXHUB254/assets/calyxhub-logo.jpg">
+  <meta property="og:image:alt" content="CalyxHub logo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CalyxHub | Technology & Digital Solutions">
+  <meta name="twitter:description" content="Web development, computer tutorials, software guides and digital solutions from Kenya.">
+  <meta name="twitter:image" content="https://calyxhub.github.io/CALYXHUB254/assets/calyxhub-logo.jpg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"CalyxHub",
+    "url":"https://calyxhub.github.io/CALYXHUB254/",
+    "logo":"https://calyxhub.github.io/CALYXHUB254/assets/calyxhub-logo.jpg",
+    "email":"calyxhub304@gmail.com",
+    "telephone":"+254792717626",
+    "address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},
+    "description":"A Kenyan technology hub sharing web development, computer tutorials, software guides and digital solutions."
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--text:#edf5ff;--muted:#a9b9cc;--accent:#55d6be;--line:rgba(255,255,255,.11);--max:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:700}.brand img{width:48px;height:48px;object-fit:contain;border-radius:10px}.brand-mark{display:none;width:43px;height:43px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#72a7ff);color:#061321;place-items:center;font-weight:800}.brand img.broken{display:none}.brand img.broken+.brand-mark{display:grid}.brand span span{color:var(--accent)}.nav-links{display:flex;align-items:center;gap:25px;color:var(--muted);font-size:.94rem}.nav-links a:hover{color:var(--accent)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 19px;font-weight:700;transition:.2s}.nav-cta,.btn-primary{background:var(--accent);color:#061a22}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(85,214,190,.2)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 12px;font-size:1.2rem}
+    .hero{position:relative;isolation:isolate;min-height:650px;display:grid;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(5,14,26,.97),rgba(5,14,26,.82),rgba(5,14,26,.48)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 75% 35%,rgba(85,214,190,.16),transparent 32%)}.hero-content{padding:90px 0;max-width:760px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:.82rem;font-weight:700;letter-spacing:1.7px;text-transform:uppercase}.eyebrow:before{content:"";width:27px;height:2px;background:var(--accent)}h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.15;letter-spacing:-.7px}h1{font-size:clamp(2.7rem,6vw,5.1rem);max-width:780px;margin:22px 0}h1 span{color:var(--accent)}.hero p{font-size:1.12rem;color:#c3d0df;max-width:630px}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.btn-outline{border:1px solid rgba(255,255,255,.28);color:var(--text)}.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}.hero-note{margin-top:30px;color:#aebfd1;font-size:.9rem}
+    section{padding:92px 0}.section-head{max-width:690px;margin-bottom:38px}.section-head h2{font-size:clamp(2rem,4vw,3.1rem);margin:13px 0}.section-head p{color:var(--muted)}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.about-copy p{color:var(--muted);margin:15px 0}.about-visual{min-height:390px;border-radius:24px;overflow:hidden;position:relative;background:#10283a}.about-visual img{width:100%;height:390px;object-fit:cover;opacity:.82}.visual-caption{position:absolute;left:20px;right:20px;bottom:20px;padding:18px 20px;background:rgba(5,15,27,.82);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:15px}.visual-caption strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.1rem}.visual-caption span{color:var(--muted);font-size:.9rem}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:28px}.stat{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.stat strong{display:block;font:700 1.35rem 'Space Grotesk';color:var(--accent)}.stat span{font-size:.82rem;color:var(--muted)}.soft-section{background:#091727;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.skill .symbol{font-size:1.55rem;margin-bottom:12px}.skill h3{font-size:1.08rem;margin-bottom:7px}.skill p{font-size:.9rem;color:var(--muted)}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project-card{overflow:hidden;border:1px solid var(--line);background:var(--panel);border-radius:18px;transition:.25s}.project-card:hover{transform:translateY(-5px);border-color:rgba(85,214,190,.55)}.project-image{height:190px;overflow:hidden;background:#102238}.project-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.project-card:hover .project-image img{transform:scale(1.05)}.project-body{padding:22px}.tag{display:inline-block;color:var(--accent);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:9px}.project-body h3{font-size:1.25rem;margin-bottom:9px}.project-body p{color:var(--muted);font-size:.92rem;min-height:75px}.project-link{display:inline-flex;align-items:center;gap:7px;margin-top:17px;color:var(--accent);font-weight:700;font-size:.9rem}
+    .timeline{display:grid;grid-template-columns:1fr 1fr;gap:18px}.timeline-item{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.timeline-item .date{font-size:.8rem;color:var(--accent);font-weight:700;letter-spacing:.8px;text-transform:uppercase}.timeline-item h3{font-size:1.15rem;margin:9px 0}.timeline-item p{color:var(--muted);font-size:.93rem}.education-card{padding:30px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(135deg,#10263b,#0c1a2b);display:flex;align-items:center;justify-content:space-between;gap:25px}.education-card h3{font-size:1.35rem;margin:8px 0}.education-card p{color:var(--muted)}.education-badge{flex-shrink:0;border:1px solid rgba(85,214,190,.4);color:var(--accent);padding:12px 16px;border-radius:12px;font-weight:700}
+    .contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}.contact-info p{color:var(--muted);margin:14px 0 24px}.contact-line{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--line);color:#d9e5f2}.contact-line b{color:var(--accent);font-size:1.1rem;width:25px;text-align:center}.contact-panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px}.contact-panel h3{font-size:1.5rem;margin-bottom:10px}.contact-panel p{color:var(--muted);margin-bottom:22px}.contact-actions{display:flex;flex-wrap:wrap;gap:12px}footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a:hover{color:var(--accent)}.back-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#061a22;font-weight:800;box-shadow:0 8px 25px #0005}
+    @media(max-width:900px){.nav-links{gap:15px}.skills-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-wrap{grid-template-columns:1fr;gap:30px}.about-visual,.about-visual img{min-height:320px;height:320px}}
+    @media(max-width:680px){.container{width:min(var(--max),calc(100% - 30px))}.nav{min-height:68px}.brand img{width:42px;height:42px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:#091727;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid var(--line)}.nav-links .nav-cta{margin-top:13px;text-align:center;border:0}.hero{min-height:600px}.hero-content{padding:75px 0}.hero:before{background:linear-gradient(90deg,rgba(5,14,26,.96),rgba(5,14,26,.78)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1100&q=80') center/cover}section{padding:70px 0}.skills-grid,.project-grid,.timeline{grid-template-columns:1fr}.project-body p{min-height:0}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:1.1rem}.stat span{font-size:.72rem}.education-card{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}.contact-panel{padding:23px}}
+  </style>
 </head>
 <body>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="#home" aria-label="CalyxHub home">
-   <img src="assets/calyxhub-logo.jpg" alt="CalyxHub logo" onerror="this.style.display='none'">
-   <span>CALYX<span>HUB</span><small>TECH • BUILD • CREATE</small></span>
-  </a>
-  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-  <nav id="navLinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
-  <a class="nav-cta" href="#contact">Let's connect ↗</a>
- </div>
-</header>
-<main>
- <div class="wrap hero" id="home">
-  <div class="hero-copy">
-   <div class="eyebrow">Computer Science • Web Development • Technology</div>
-   <h1>Curious mind.<br><span>Builder's mindset.</span></h1>
-   <p>I'm Daniel Wachira, a Computer Science student who enjoys understanding how technology works and turning ideas into useful digital experiences. Welcome to my corner of the web.</p>
-   <div class="actions"><a class="btn primary" href="#projects">Explore my projects ↗</a><a class="btn secondary" href="#contact">Get in touch</a></div>
-   <div class="hero-note">01 <b>LEARN</b> • 02 <b>BUILD</b> • 03 <b>GROW</b></div>
-  </div>
-  <aside class="hero-panel">
-   <img src="assets/calyxhub-logo.jpg" alt="CalyxHub brand logo" onerror="this.style.display='none'">
-   <h2>Ideas into useful technology.</h2>
-   <p>I learn by building — from websites and databases to networking, computer systems and digital tools.</p>
-   <div class="stats"><div class="stat"><strong>4+</strong><span>Featured projects</span></div><div class="stat"><strong>CS</strong><span>Field of study</span></div><div class="stat"><strong>Web</strong><span>Building for the web</span></div><div class="stat"><strong>Always</strong><span>Learning and improving</span></div></div>
-  </aside>
- </div>
- <section id="about"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">01 / About me</div><h2>A little about Daniel</h2></div><p>Technology is more than a subject to study — it's a practical way to solve problems and make everyday work easier.</p></div>
-  <div class="about-grid"><div class="panel"><h3>Curiosity drives my work.</h3><p>I enjoy exploring how software, hardware and networks fit together. I am growing my skills through coursework, hands-on practice and personal projects.</p><p>My current interests include web development, databases, networking, operating systems and creative digital solutions.</p></div>
-  <div class="panel"><h3>Quick facts</h3><div class="facts"><div class="fact"><strong>Based in</strong>Nairobi, Kenya</div><div class="fact"><strong>Study area</strong>Computer Science</div><div class="fact"><strong>Approach</strong>Learn by building</div><div class="fact"><strong>Portfolio</strong>CalyxHub</div></div></div></div>
- </div></section>
- <section id="skills"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">02 / Skills</div><h2>Tools I work with</h2></div><p>A growing toolkit built through college practicals, self-learning and project work.</p></div>
-  <div class="skills">
-   <article class="skill"><div class="symbol">⌘</div><h3>Web development</h3><p>HTML, CSS, JavaScript and responsive page layouts.</p></article>
-   <article class="skill"><div class="symbol">⌨</div><h3>Programming</h3><p>Python, Visual Basic fundamentals and problem solving.</p></article>
-   <article class="skill"><div class="symbol">▤</div><h3>Databases</h3><p>SQL, database design, queries, tables and relationships.</p></article>
-   <article class="skill"><div class="symbol">⌁</div><h3>Networking</h3><p>Networking fundamentals, IP addressing and Cisco Packet Tracer.</p></article>
-   <article class="skill"><div class="symbol">▣</div><h3>Computer systems</h3><p>Computer organization, hardware and operating systems.</p></article>
-   <article class="skill"><div class="symbol">✳</div><h3>Productivity & design</h3><p>Microsoft Office, graphic design and digital content.</p></article>
-  </div>
- </div></section>
- <section id="projects"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">03 / Selected work</div><h2>Projects with a purpose</h2></div><p>Explore some of my personal, community and academic projects.</p></div>
-  <div class="projects">
-   <article class="project"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=82" alt="Laptop showing a web development workspace" loading="lazy"><div class="project-body"><div class="project-type">Web platform</div><h3>CalyxHub</h3><p>A resource hub for technology tips, tutorials, notes, software guidance and useful digital resources.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div><a class="project-link" href="https://wachirad341.github.io/calyxhub2/" target="_blank" rel="noopener">Visit live project ↗</a></div></article>
-   <article class="project"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=82" alt="Digital technology and connected devices" loading="lazy"><div class="project-body"><div class="project-type">Web application · In progress</div><h3>CalyxTrack</h3><p>A consent-first location-sharing concept focused on users choosing when and with whom to share their device location.</p><div class="tags"><span class="tag">Web</span><span class="tag">Geolocation</span><span class="tag">Privacy-first</span></div><a class="project-link" href="mailto:calyxhub304@gmail.com?subject=CalyxTrack%20project%20enquiry">Discuss this project ↗</a></div></article>
-   <article class="project"><img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1000&q=82" alt="Church interior with rows of seating" loading="lazy"><div class="project-body"><div class="project-type">Community project</div><h3>FGCK Mihango</h3><p>A church website concept bringing service information, announcements, contact details and community updates together.</p><div class="tags"><span class="tag">Website</span><span class="tag">Community</span><span class="tag">Design</span></div><a class="project-link" href="https://fgck-mihango.vercel.app/" target="_blank" rel="noopener">Visit website ↗</a></div></article>
-   <article class="project"><img src="https://images.unsplash.com/photo-1516321310764-8d8b8c9b5f7b?auto=format&fit=crop&w=1000&q=82" alt="Laptop and digital workspace for student database development" loading="lazy"><div class="project-body"><div class="project-type">Academic practice</div><h3>Student Management</h3><p>A student-records application concept for practising database design and connecting a Visual Basic interface to SQL Server.</p><div class="tags"><span class="tag">Visual Basic</span><span class="tag">SQL Server</span><span class="tag">Database</span></div><a class="project-link" href="mailto:calyxhub304@gmail.com?subject=Student%20Management%20project%20enquiry">Discuss this project ↗</a></div></article>
-  </div>
- </div></section>
- <section id="experience"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">04 / Experience</div><h2>Learning through practice</h2></div><p>Building practical confidence alongside my formal studies and hands-on ICT exposure.</p></div>
-  <div class="panel timeline">
-   <div class="timeline-item"><strong>TV & Radio Station attachment</strong><span>Server-room systems</span><p>Exposure to ICT systems and technology supporting television and radio operations.</p></div>
-   <div class="timeline-item"><strong>Laikipia County Government · ICT Department</strong><span>Practical ICT exposure</span><p>Experience context in an ICT department environment.</p></div>
-   <div class="timeline-item"><strong>Obex Limited</strong><span>IT support & media</span><p>Practical exposure to IT support and media-related work.</p></div>
-   <div class="timeline-item"><strong>Personal technology projects</strong><span>Ongoing</span><p>Designing and improving websites, exploring databases and practising practical IT skills.</p></div>
-  </div>
- </div></section>
- <section id="education"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">05 / Education</div><h2>My learning journey</h2></div></div>
-  <div class="panel timeline"><div class="timeline-item"><strong>Kiambu National Polytechnic</strong><span>2024 – 2027</span><p>Computer Science — TVET / CDACC Level 6.</p></div><div class="timeline-item"><strong>GG Rumuruti Boys High School</strong><span>2020 – 2023</span><p>Secondary education.</p></div></div>
- </div></section>
- <section id="contact"><div class="wrap">
-  <div class="section-head"><div><div class="eyebrow">06 / Contact</div><h2>Have an idea? Let's talk.</h2></div><p>For collaborations, project enquiries, opportunities or a friendly technology conversation, reach out.</p></div>
-  <div class="contact-grid"><div class="panel"><h3>Get in touch</h3><p>I'm happy to connect about technology, websites, learning and project ideas.</p><a class="contact-link" href="mailto:calyxhub304@gmail.com"><span>✉</span><div><b>Email</b><span>calyxhub304@gmail.com</span></div></a><a class="contact-link" href="https://wa.me/254792717626" target="_blank" rel="noopener"><span>☏</span><div><b>WhatsApp</b><span>+254 792 717 626</span></div></a></div>
-  <div class="panel"><h3>Connect with CalyxHub</h3><p>Based in Nairobi, Kenya. Let's turn a good idea into something useful.</p><a class="btn primary" href="https://wa.me/254792717626?text=Hello%20Daniel%2C%20I%20found%20your%20CalyxHub%20portfolio." target="_blank" rel="noopener">Message on WhatsApp ↗</a></div></div>
- </div></section>
-</main>
-<footer><div class="wrap footer-inner"><span>© <span id="year"></span> CalyxHub · Daniel Wachira</span><span>Built with curiosity in Nairobi, Kenya.</span><a href="#home">Back to top ↑</a></div></footer>
-<script>
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
-menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+  <header class="site-header"><div class="container nav">
+    <a class="brand" href="#home" aria-label="CalyxHub home"><img src="assets/calyxhub-logo.jpg" alt="CalyxHub logo" onerror="this.classList.add('broken')"><span class="brand-mark" aria-hidden="true">C</span><span>Calyx<span>Hub</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" class="nav-cta">Let's Talk ↗</a></nav>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="container"><div class="hero-content"><span class="eyebrow">Technology · Creativity · Solutions</span><h1>Building digital ideas into <span>real solutions.</span></h1><p>Welcome to CalyxHub — a technology and digital solutions hub sharing web development, practical computer skills, software guides and creative projects from Nairobi, Kenya.</p><div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore My Work ↗</a><a class="btn btn-outline" href="https://wa.me/254792717626?text=Hello%20CalyxHub%2C%20I%27d%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener">Chat on WhatsApp</a></div><div class="hero-note">Practical technology. Creative thinking. Better digital experiences.</div></div></div></section>
+    <section id="about"><div class="container about-grid"><div class="about-copy"><span class="eyebrow">A little about CalyxHub</span><div class="section-head"><h2>Technology made practical and accessible.</h2></div><p>CalyxHub is a growing Kenyan technology brand focused on making digital skills easier to understand and use. Here you'll find practical learning resources, web projects, computer tutorials and ideas built around real-world technology.</p><p>I'm Daniel Wachira, a Computer Science student passionate about software, web development, networking and solving everyday technology challenges. This portfolio brings together my learning journey and selected projects.</p><div class="stats"><div class="stat"><strong>Web</strong><span>Design & development</span></div><div class="stat"><strong>IT</strong><span>Practical support skills</span></div><div class="stat"><strong>KE</strong><span>Based in Nairobi</span></div></div></div><div class="about-visual"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85" alt="Person working on a laptop in a modern workspace" loading="lazy"><div class="visual-caption"><strong>Learn. Build. Improve.</strong><span>Turning curiosity into useful digital skills and projects.</span></div></div></div></section>
+    <section class="soft-section" id="skills"><div class="container"><div class="section-head"><span class="eyebrow">What I work with</span><h2>Skills & areas of focus</h2><p>A growing toolkit built through coursework, practical projects and independent learning.</p></div><div class="skills-grid">
+      <article class="skill"><div class="symbol">⌨️</div><h3>Web Development</h3><p>HTML, CSS, JavaScript and responsive website building.</p></article><article class="skill"><div class="symbol">🐍</div><h3>Programming</h3><p>Python fundamentals, Visual Basic and problem solving.</p></article><article class="skill"><div class="symbol">🗄️</div><h3>Databases</h3><p>SQL, database design, queries and application connectivity.</p></article><article class="skill"><div class="symbol">🌐</div><h3>Networking</h3><p>Network fundamentals, configuration and troubleshooting.</p></article><article class="skill"><div class="symbol">💻</div><h3>Computer Systems</h3><p>Computer organization, operating systems and hardware basics.</p></article><article class="skill"><div class="symbol">🎨</div><h3>Graphic Design</h3><p>Visual communication and creative digital content.</p></article><article class="skill"><div class="symbol">📊</div><h3>Productivity Tools</h3><p>Microsoft Word, Excel, Access and PowerPoint.</p></article><article class="skill"><div class="symbol">🧩</div><h3>IT Problem Solving</h3><p>Researching, diagnosing and explaining everyday tech issues.</p></article>
+    </div></div></section>
+    <section id="projects"><div class="container"><div class="section-head"><span class="eyebrow">Selected work</span><h2>Projects & ideas</h2><p>A selection of digital projects, learning builds and concepts. Some are works in progress as I continue developing them.</p></div><div class="project-grid" id="projectGrid">
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Analytics dashboard on a laptop" loading="lazy"></div><div class="project-body"><span class="tag">Technology platform</span><h3>CalyxHub</h3><p>A technology resource hub for tutorials, software guides, computer tips and digital learning resources.</p><a class="project-link" href="https://calyxhub.github.io/CALYXHUB254/" target="_blank" rel="noopener">Visit website ↗</a></div></article>
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Server equipment in a data centre" loading="lazy"></div><div class="project-body"><span class="tag">Web concept</span><h3>CalyxTrack</h3><p>A concept for consent-based location sharing, designed with transparency and user control in mind.</p><a class="project-link" href="mailto:calyxhub304@gmail.com?subject=CalyxTrack%20project%20inquiry">Ask about project ↗</a></div></article>
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=900&q=80" alt="Church interior with stage lighting" loading="lazy"></div><div class="project-body"><span class="tag">Community website</span><h3>FGCK Mihango</h3><p>A church website concept for service information, announcements, ministry activities and communication.</p><a class="project-link" href="https://fgck-mihango.vercel.app/" target="_blank" rel="noopener">View project ↗</a></div></article>
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80" alt="Programming code on a computer screen" loading="lazy"></div><div class="project-body"><span class="tag">Academic project</span><h3>Student Management System</h3><p>A learning project exploring student records, SQL databases and application forms using Visual Basic.</p><a class="project-link" href="mailto:calyxhub304@gmail.com?subject=Student%20Management%20System%20inquiry">Ask about project ↗</a></div></article>
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Laptop displaying a development workspace" loading="lazy"></div><div class="project-body"><span class="tag">Learning</span><h3>Computer Tutorials</h3><p>Simple notes and practical guides covering computer systems, programming, networking and software.</p><a class="project-link" href="mailto:calyxhub304@gmail.com?subject=Tutorials%20and%20learning%20resources">Request resources ↗</a></div></article>
+      <article class="project-card"><div class="project-image"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="People collaborating around a laptop" loading="lazy"></div><div class="project-body"><span class="tag">Digital services</span><h3>Website & Creative Services</h3><p>Portfolio websites, basic web presence, design support and digital project assistance.</p><a class="project-link" href="https://wa.me/254792717626?text=Hello%20CalyxHub%2C%20I%27m%20interested%20in%20your%20digital%20services." target="_blank" rel="noopener">Discuss a project ↗</a></div></article>
+    </div></div></section>
+    <section class="soft-section" id="experience"><div class="container"><div class="section-head"><span class="eyebrow">Learning journey</span><h2>Experience & practical exposure</h2><p>Building confidence through education, hands-on learning and exposure to real ICT environments.</p></div><div class="timeline"><article class="timeline-item"><span class="date">Practical exposure</span><h3>TV & Radio Station Environment</h3><p>Exposure to ICT operations in a broadcast environment, including server-room systems and technical infrastructure.</p></article><article class="timeline-item"><span class="date">ICT exposure</span><h3>Laikipia County Government — ICT</h3><p>ICT-related exposure and learning in a county government environment.</p></article><article class="timeline-item"><span class="date">Work experience</span><h3>Obex</h3><p>Practical workplace experience contributing to professional development and technical skills.</p></article><article class="timeline-item"><span class="date">Ongoing development</span><h3>Independent Projects</h3><p>Continuously building websites, database applications and practical technology solutions.</p></article></div></div></section>
+    <section id="education"><div class="container"><div class="section-head"><span class="eyebrow">Education</span><h2>Academic background</h2></div><div class="education-card"><div><span class="tag">2024 – 2027</span><h3>Diploma in Computer Science — TVET/CDACC Level 6</h3><p>Kiambu National Polytechnic · Kenya</p></div><div class="education-badge">Computer Science</div></div></div></section>
+    <section class="soft-section" id="contact"><div class="container contact-wrap"><div class="contact-info"><span class="eyebrow">Get in touch</span><div class="section-head"><h2>Have an idea? Let's build something.</h2></div><p>For website inquiries, collaborations, learning resources or digital project discussions, reach out through any of the channels below.</p><a class="contact-line" href="mailto:calyxhub304@gmail.com"><b>✉</b><span>calyxhub304@gmail.com</span></a><a class="contact-line" href="tel:+254792717626"><b>☎</b><span>+254 792 717 626</span></a><div class="contact-line"><b>⌖</b><span>Nairobi, Kenya</span></div></div><div class="contact-panel"><h3>Let's connect</h3><p>Have a project in mind or need help with a digital idea? Send a message and let's talk about it.</p><div class="contact-actions"><a class="btn btn-primary" href="https://wa.me/254792717626?text=Hello%20CalyxHub%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp Me ↗</a><a class="btn btn-outline" href="mailto:calyxhub304@gmail.com?subject=CalyxHub%20Inquiry">Send an Email ↗</a></div></div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><div>© <span id="year"></span> CalyxHub. Built with purpose in Kenya.</div><div class="footer-links"><a href="#home">Back to top ↑</a><a href="mailto:calyxhub304@gmail.com">Contact</a><a href="https://wa.me/254792717626" target="_blank" rel="noopener">WhatsApp</a></div></div></footer>
+  <a class="back-top" href="#home" aria-label="Back to top">↑</a>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
 </body>
 </html>
-
