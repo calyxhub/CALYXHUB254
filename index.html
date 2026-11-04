@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050914">
+  <meta name="description" content="Daniel Wachira — Computer Science student, web developer and creative technology enthusiast. Learn, Build, Grow.">
+  <title>Daniel Wachira | CalyxHub Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="CalyxHub home">
+      <img src="assets/calyxhub-brand-logo.png" alt="CalyxHub logo">
+      <span>Calyx<span>Hub</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navMenu">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> COMPUTER SCIENCE • CREATIVE TECHNOLOGY</p>
+        <h1>Turning ideas into <span>useful technology.</span></h1>
+        <p class="lead">I'm <strong>Daniel Wachira</strong> — a Computer Science student building practical digital solutions through web development, networking, databases and design.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="btn secondary" href="#contact">Let's connect</a>
+        </div>
+        <div class="mini-proof"><span>01</span> Learn <i>•</i> <span>02</span> Build <i>•</i> <span>03</span> Grow</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="logo-card"><img src="assets/calyxhub-brand-logo.png" alt="CalyxHub — Learn, Build, Grow"></div>
+        <div class="float-tag tag-top">⌘ Problem solving</div>
+        <div class="float-tag tag-bottom">✦ Always learning</div>
+      </div>
+    </section>
+
+    <section class="section intro-grid" id="about">
+      <div class="about-heading">
+        <p class="eyebrow">01 / ABOUT ME</p>
+        <h2>Curious mind.<br><span>Builder's mindset.</span></h2>
+        <img class="profile-photo" src="assets/daniel-wachira-profile.png" alt="Portrait of Daniel Wachira" loading="lazy">
+        <p class="profile-caption">Daniel Wachira · Computer Science</p>
+      </div>
+      <div class="about-text">
+        <p>I enjoy understanding how technology works and using that knowledge to create things people can actually use. My interests range from writing code and building websites to computer systems, networking and visual design.</p>
+        <p>I'm growing my skills through coursework, hands-on practice and personal projects. I value clean design, simple user experiences and learning by building.</p>
+        <div class="about-facts">
+          <div><b>Computer Science</b><small>TVET / CDACC Level 6</small></div>
+          <div><b>Kiambu National Polytechnic</b><small>2024 – 2027</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading"><div><p class="eyebrow">02 / WHAT I DO</p><h2>Skills & <span>toolkit</span></h2></div><p>Practical skills I'm developing and applying across classwork and personal projects.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card"><div class="skill-icon">⌨</div><h3>Programming</h3><p>Python fundamentals, Visual Basic and logical problem solving.</p><div class="tags"><span>Python</span><span>VB.NET</span><span>Logic</span></div></article>
+        <article class="skill-card"><div class="skill-icon">⌘</div><h3>Web Development</h3><p>Building responsive websites and working with front-end technologies.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
+        <article class="skill-card"><div class="skill-icon">▤</div><h3>Databases</h3><p>Creating tables, writing SQL queries and learning application connectivity.</p><div class="tags"><span>SQL</span><span>SQL Server</span><span>Database design</span></div></article>
+        <article class="skill-card"><div class="skill-icon">⌁</div><h3>Networking</h3><p>Network fundamentals, configuration practice and troubleshooting.</p><div class="tags"><span>TCP/IP</span><span>Packet Tracer</span><span>Troubleshooting</span></div></article>
+        <article class="skill-card"><div class="skill-icon">▣</div><h3>Computer Systems</h3><p>Computer organization, operating systems and basic hardware support.</p><div class="tags"><span>Windows</span><span>Hardware</span><span>OS</span></div></article>
+        <article class="skill-card"><div class="skill-icon">✳</div><h3>Design & Productivity</h3><p>Visual communication, graphics and everyday office productivity tools.</p><div class="tags"><span>Graphic design</span><span>Word</span><span>Excel</span><span>PowerPoint</span></div></article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>Things I'm <span>building</span></h2></div><p>A selection of personal and learning projects. Some are works in progress.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All projects</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="learning">Learning</button><button class="filter" data-filter="community">Community</button>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card" data-category="web"><div class="project-visual visual-blue"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=85" alt="A team working with laptops and digital technology" loading="lazy"></div><div class="project-body"><p class="project-type">WEB PLATFORM</p><h3>CalyxHub</h3><p>A resource hub concept for technology tips, tutorials, notes and useful digital resources.</p><div class="project-foot"><span>HTML • CSS • JavaScript</span><a href="https://wachirad341.github.io/danieltech/" target="_blank" rel="noopener">Visit project ↗</a></div></div></article>
+        <article class="project-card" data-category="web"><div class="project-visual visual-dark"><img src="https://images.unsplash.com/photo-1524666041070-4a5e7c7e7e2a?auto=format&fit=crop&w=1000&q=85" alt="Map view representing consent-based GPS location sharing" loading="lazy"></div><div class="project-body"><p class="project-type">WEB APPLICATION • IN PROGRESS</p><h3>CalyxTrack</h3><p>A location-sharing concept focused on clear user consent and sharing a device's own GPS location.</p><div class="project-foot"><span>Web • Geolocation</span><span class="status">In progress</span></div></div></article>
+        <article class="project-card" data-category="community"><div class="project-visual visual-purple"><img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1000&q=85" alt="Church interior representing the FGCK Mihango website concept" loading="lazy"></div><div class="project-body"><p class="project-type">COMMUNITY PROJECT</p><h3>FGCK Mihango</h3><p>A church website concept for service information, announcements, media and online giving details.</p><div class="project-foot"><span>Web design</span><span class="status">Concept</span></div></div></article>
+        <article class="project-card" data-category="learning"><div class="project-visual visual-green"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1000&q=85" alt="Computer screen showing programming code for a student database project" loading="lazy"></div><div class="project-body"><p class="project-type">ACADEMIC PRACTICE</p><h3>Student Management</h3><p>Practising student records, SQL queries and connecting a Visual Basic application to SQL Server.</p><div class="project-foot"><span>Visual Basic • SQL</span><span class="status">Learning</span></div></div></article>
+      </div>
+    </section>
+
+
+    <section class="section experience-section" id="experience">
+      <div class="section-heading"><div><p class="eyebrow">04 / PRACTICAL EXPOSURE</p><h2>Experience & <span>practice</span></h2></div><p>Hands-on exposure to technology environments, support work and real-world systems.</p></div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <span class="experience-mark">01</span>
+          <div><p class="project-type">TECHNICAL ENVIRONMENT</p><h3>TV & Radio Station</h3><p>Exposure to broadcast technology environments, including server-room systems and the technical infrastructure that supports station operations.</p><div class="tags"><span>Server-room systems</span><span>Technical support</span><span>Broadcast technology</span></div></div>
+        </article>
+        <article class="experience-card">
+          <span class="experience-mark">02</span>
+          <div><p class="project-type">ICT DEPARTMENT</p><h3>Laikipia County Government</h3><p>ICT department exposure, building familiarity with information technology support and organizational ICT operations.</p><div class="tags"><span>ICT support</span><span>Computer systems</span></div></div>
+        </article>
+        <article class="experience-card">
+          <span class="experience-mark">03</span>
+          <div><p class="project-type">IT SUPPORT & MEDIA</p><h3>Obex Limited</h3><p>Practical exposure connected to IT support and media-related work.</p><div class="tags"><span>IT support</span><span>Media</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section education" id="education">
+      <div><p class="eyebrow">05 / LEARNING JOURNEY</p><h2>Education & <span>growth</span></h2></div>
+      <div class="timeline"><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-date">2024 — 2027</p><h3>Computer Science · TVET / CDACC Level 6</h3><p>Kiambu National Polytechnic</p><small>Building foundations in programming, databases, networking, computer systems and mathematics.</small></div><div class="timeline-item"><span class="timeline-dot"></span><p class="timeline-date">ONGOING</p><h3>Learning by building</h3><p>Personal projects & practical exercises</p><small>Applying classroom knowledge to websites, database applications and real-world technology challenges.</small></div></div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="contact-panel"><div><p class="eyebrow">05 / GET IN TOUCH</p><h2>Have an idea?<br><span>Let's build something.</span></h2><p class="contact-copy">I'm open to learning opportunities, collaborations, projects and conversations about technology.</p>
+          <div class="direct-contact">
+            <a href="https://wa.me/254792717626" target="_blank" rel="noopener">WhatsApp · 0792717626 ↗</a>
+            <a href="mailto:calyxhub304@gmail.com">calyxhub304@gmail.com ↗</a>
+          </div>
+        </div>
+        <form id="contactForm">
+          <label for="senderName">Your name</label><input id="senderName" name="name" required placeholder="Enter your name">
+          <label for="senderEmail">Your email</label><input id="senderEmail" name="email" type="email" required placeholder="you@example.com">
+          <label for="message">Message</label><textarea id="message" name="message" rows="4" required placeholder="Tell me what you have in mind..."></textarea>
+          <button class="btn primary submit-btn" type="submit">Prepare message <span>↗</span></button>
+          <p class="form-note" id="formNote">This opens your email app with your message ready to send.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#home">Calyx<span>Hub</span></a><p>Learn. Build. Grow.</p><small>© <span id="year"></span> Daniel Wachira. Built with curiosity.</small><a class="back-top" href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
